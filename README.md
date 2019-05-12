@@ -1,6 +1,6 @@
 # Node.js-Web-Server-
-#### Node.js从零开发Web Server博客项目笔记
-###### 代码运行流程
+## Node.js从零开发Web Server博客项目笔记
+#### 代码运行流程
 首先开启服务器，在npm run dev的时候运行了bin目录下的www.js文件，启动http服务
 
 当前端进行访问的时候，经过app.js文件
@@ -17,7 +17,7 @@ App.js是整个项目的入口文件，首先判断这个用户在http的header�
 
 App.js中调用handleBlogRouter获取到处理后的数据，转换为字符串，然后返回给前端
 
-###### Cookie
+#### Cookie
 什么是cookie，cookie是存在浏览器的一段字符串，格式k1=v1;k2=v2;可存储结构化数据
 
 Cookie的大小，5kb
@@ -32,7 +32,7 @@ Server端可以修改cookie，并返回给浏览器
 
 Cookie中不要暴露用户的敏感信息
 
-###### Session
+#### Session
 Session中存储用户的信息，通过cookie中获取到的信息，查询出需要验证的信息
 
 Session存放在数据库中，如果存储在进程的内存中，会导致进程卡死，缓慢
@@ -41,14 +41,14 @@ Session存放在数据库中，如果存储在进程的内存中，会导致进�
 
 系统会限制进程的内存
 
-###### Redis
+#### Redis
 Web server最常用的缓存数据库，数据存放在内存中
 
 相比mysql读取速度快（内存读取的速度比硬盘快的多）
 
 成本高，可存储的数据量更少
 
-###### Nginx
+#### Nginx
 Nginx反向代理，安装nginx，配置nginx.conf文件
 
 记录日志
@@ -61,13 +61,13 @@ Nginx反向代理，安装nginx，配置nginx.conf文件
 
 日志逐行读取，使用readline
 
-###### Server安全
+#### Server安全
 
 预防sql攻击，例如注释掉部分条件语句，通过传进来的sql
 
 Xss攻击，往服务器中添加js代码，预防主要是过滤掉<>尖括号，转换成html格式，安装xss
 
-###### 密码加密
+#### 密码加密
 万一数据库被攻破，最不应该泄露的就是用户信息
 
 攻击方式：获取用户名和密码，再去尝试登录其他系统
