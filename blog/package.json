@@ -1,0 +1,18 @@
+{
+  "name": "http-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www.js",
+    "pro": "cross-env NODE_ENV=production nodemon ./bin/www.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.11",
+    "redis": "^2.8.0"
+  }
+}
